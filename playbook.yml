@@ -1,6 +1,7 @@
 - 
   name: Start lighttpd # 
   hosts: webserver
+  become: yes
   tasks:
     - name: Trying to ping the server
       ansible.builtin.ping:
