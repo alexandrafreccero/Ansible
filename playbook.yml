@@ -1,0 +1,10 @@
+- 
+  name: Start lighttpd # 
+  host: webserver
+  tasks:
+    - name: Example from an Ansible Playbook
+      ansible.builtin.ping:
+
+    # - name: Install lighttpd
+    #   apt:
+    #     name: lighttpd
