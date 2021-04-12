@@ -4,7 +4,11 @@
   tasks:
     - name: Trying to ping the server
       ansible.builtin.ping:
+    - name: Install lighttpd
+      apt:
+        name: lighttpd
+    - name: Start lighttpd
+      ansible.builtin.systemd:
+        state: started
+        name: lighttpd
 
-    # - name: Install lighttpd
-    #   apt:
-    #     name: lighttpd
