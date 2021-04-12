@@ -1,8 +1,8 @@
 - 
   name: Start lighttpd # 
-  host: webserver
+  hosts: webserver
   tasks:
-    - name: Example from an Ansible Playbook
+    - name: Trying to ping the server
       ansible.builtin.ping:
 
     # - name: Install lighttpd
