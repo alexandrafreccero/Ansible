@@ -1,15 +1,14 @@
 - 
-  name: Start lighttpd # 
+  name: Start lighttpd
   hosts: webserver
-  become: yes
+  become: yes # https://docs.ansible.com/ansible/2.4/become.html
   tasks:
     - name: Trying to ping the server
-      ansible.builtin.ping:
+      ansible.builtin.ping: # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ping_module.html 
     - name: Install lighttpd
-      apt:
+      apt: # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
         name: lighttpd
     - name: Start lighttpd
-      ansible.builtin.systemd:
+      ansible.builtin.systemd: # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/systemd_module.html
         state: started
         name: lighttpd
-
